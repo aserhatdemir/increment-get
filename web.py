@@ -17,7 +17,7 @@ def hello():
 
 @app.route('/increment', methods=['GET'])
 def get_global_increment():
-    result = mem_incrementer.get_global_increment()
+    result = mem_incrementer.get_increment('global')
     if result:
         return result
     abort(404)
