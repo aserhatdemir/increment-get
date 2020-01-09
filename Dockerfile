@@ -5,6 +5,7 @@ ENV FLASK_APP "web.py"
 ENV FLASK_ENV "development"
 ENV FLASK_DEBUG True
 
+
 RUN mkdir /app
 WORKDIR /app
 
