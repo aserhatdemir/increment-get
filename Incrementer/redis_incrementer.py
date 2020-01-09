@@ -28,3 +28,11 @@ class RedisIncrementer(Incrementer):
             self.r.expire(session_id, timedelta(seconds=5))
         return {session_id: val}
 
+    def get_value(self, session_id):
+        return {session_id: int(str(self.r.get(session_id), 'utf-8'))}
+
+    def set_value(self, session_id, val):
+        if self.r.mset({session_id: val}):
+            return self.get_value(session_id)
+        return None
+
