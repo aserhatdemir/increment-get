@@ -18,8 +18,8 @@ class MemIncrementer(Incrementer):
         self.inc_values[session_id] += 1
         return {session_id: self.inc_values[session_id]}
 
-    #
-    #
+    # make the commit and push work comment
+
     # def get_increment(self, session_id):
     #     # increment redis value, if the key does not exist initialize the value with 1
     #     val = self.r.incr(session_id, 1)
