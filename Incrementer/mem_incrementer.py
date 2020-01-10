@@ -21,7 +21,6 @@ class MemIncrementer(Incrementer):
             return self.get_value(session_id)
         return None
 
-# currently do1 run on port 80.
 
 
 
