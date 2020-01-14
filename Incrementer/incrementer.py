@@ -1,7 +1,11 @@
 class Incrementer:
 
-    def get_global_increment(self):
+    def get_increment(self, session_id):
         pass
 
-    def increment_and_get(self, session=None):
+    def get_value(self, session_id):
         pass
+
+    def set_value(self, session_id, val):
+        pass
+

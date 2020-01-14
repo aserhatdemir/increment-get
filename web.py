@@ -40,7 +40,7 @@ def get_increment_temp(session_id):
 
 
 @app.route('/increment/', methods=['GET'])
-def find_contact():
+def get_value():
     search_key = request.args.get('q')
     result = incrementer.get_value(search_key)
     if result:
@@ -49,7 +49,7 @@ def find_contact():
 
 
 @app.route('/increment/<session_id>', methods=['POST'])
-def update_contact(session_id):
+def set_value(session_id):
     val = int(request.data)
     result = incrementer.set_value(session_id, val)
     if result:
